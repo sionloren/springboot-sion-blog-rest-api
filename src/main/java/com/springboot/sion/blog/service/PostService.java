@@ -1,9 +1,7 @@
 package com.springboot.sion.blog.service;
 
 import com.springboot.sion.blog.dto.PostDto;
-import com.springboot.sion.blog.model.PostResponse;
-
-import java.util.List;
+import com.springboot.sion.blog.dto.PostResponse;
 
 public interface PostService {
     PostDto createPost(PostDto postDto);

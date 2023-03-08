@@ -3,7 +3,7 @@ package com.springboot.sion.blog.service.impl;
 import com.springboot.sion.blog.dto.PostDto;
 import com.springboot.sion.blog.exception.ResourceNotFoundException;
 import com.springboot.sion.blog.model.Post;
-import com.springboot.sion.blog.model.PostResponse;
+import com.springboot.sion.blog.dto.PostResponse;
 import com.springboot.sion.blog.repository.PostRepository;
 import com.springboot.sion.blog.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
