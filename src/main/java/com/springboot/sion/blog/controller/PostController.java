@@ -1,7 +1,7 @@
 package com.springboot.sion.blog.controller;
 
 import com.springboot.sion.blog.dto.PostDto;
-import com.springboot.sion.blog.model.PostResponse;
+import com.springboot.sion.blog.dto.PostResponse;
 import com.springboot.sion.blog.service.PostService;
 import com.springboot.sion.blog.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;

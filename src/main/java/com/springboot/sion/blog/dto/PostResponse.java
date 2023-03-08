@@ -1,4 +1,4 @@
-package com.springboot.sion.blog.model;
+package com.springboot.sion.blog.dto;
 
 import com.springboot.sion.blog.dto.PostDto;
 import lombok.AllArgsConstructor;
