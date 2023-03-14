@@ -1,5 +1,6 @@
 package com.springboot.sion.blog.controller;
 
+import com.springboot.sion.blog.dto.JwtAuthResponse;
 import com.springboot.sion.blog.dto.LoginDto;
 import com.springboot.sion.blog.dto.RegisterDto;
 import com.springboot.sion.blog.service.AuthService;
@@ -24,10 +25,14 @@ public class AuthController {
 
     //Build Login REST API
     @PostMapping(value = {"/login", "/signin"})
-    public ResponseEntity<String> login(@RequestBody LoginDto loginDto) {
-        String response = authService.login(loginDto);
+    public ResponseEntity<JwtAuthResponse> login(@RequestBody LoginDto loginDto) {
+        String token = authService.login(loginDto);
 
-        return ResponseEntity.ok(response);
+        JwtAuthResponse jwtAuthResponse = new JwtAuthResponse();
+        jwtAuthResponse.setAccessToken(token);
+
+        return new ResponseEntity<>(jwtAuthResponse, HttpStatus.OK);
+//        return ResponseEntity.ok(jwtAuthResponse);
     }
 
     //Build register REST API
