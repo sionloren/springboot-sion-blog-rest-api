@@ -38,4 +38,10 @@ public class Post {
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Comment> comments = new HashSet<>();
 
+    //Lazy - will be loaded on demand
+    @ManyToOne(fetch = FetchType.LAZY)
+    //acts as foreign key
+    @JoinColumn(name = "category_id")
+    private Category category;
+
 }
