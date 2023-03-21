@@ -8,21 +8,22 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Schema(
-        description = "LoginDto Model Information"
+        description = "CategoryDto Model Information"
 )
-public class LoginDto {
+public class CategoryDto {
+
+    private Long id;
 
     @Schema(
-            description = "Blog Login Username or Email Credential"
+            description = "Blog Category Name"
     )
-    private String usernameOrEmail;
+    private String name;
 
     @Schema(
-            description = "Blog Login Password"
+            description = "Blog Category Description"
     )
-    private String password;
-
+    private String description;
 }
